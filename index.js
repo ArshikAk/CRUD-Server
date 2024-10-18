@@ -15,6 +15,10 @@ mongoose.connect("mongodb+srv://Arshik:ammukutty123@chatapp.upoqts6.mongodb.net/
 app.use(express.json());
 app.use(cors({origin : true , credentials : true}));
 
+app.get("/",(req,res) => {
+    res.send("Hello World");
+})
+
 app.post("/create",(req,res) => {
     const {name,age,email} = req.body;
 
